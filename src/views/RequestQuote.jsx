@@ -15,7 +15,7 @@ const RequestQuoteHero = () => {
         ref={heroRef}
         className="relative min-h-[calc(100vh-1.25rem)] md:min-h-[calc(100vh-1.5rem)] w-full bg-black overflow-hidden flex flex-col"
       >
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 overflow-hidden">
           <Image
             src="/images/isaac/F4L TZ (9).webp"
             alt="Producer filming on location for BigzImage"
@@ -23,10 +23,12 @@ const RequestQuoteHero = () => {
             priority
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-black to-neutral-950" />
-          <div className="absolute -top-40 -left-56 w-[620px] h-[620px] rounded-full bg-[#475569] blur-[180px]" />
-          <div className="absolute bottom-[-160px] right-[-120px] w-[720px] h-[720px] rounded-full bg-[#0f172a] blur-[220px]" />
-          <div className="absolute top-1/3 right-1/4 w-[260px] h-[260px] rounded-full bg-[#f6ae2d]/20 blur-[140px]" />
+          <div className="absolute inset-0 bg-black/55" />
+        </div>
+
+        <div className="pointer-events-none absolute inset-0 opacity-[0.35]">
+          <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-neutral-900 blur-[140px]" />
+          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-neutral-950 blur-[140px]" />
         </div>
 
         <ImageHeroNav heroRef={heroRef} />
