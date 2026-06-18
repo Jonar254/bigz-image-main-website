@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from 'react';
+import Image from 'next/image';
 import ImageHeroNav from '../components/ImageHeroNav';
 import RequestQuoteForm from '../components/forms/request-quote-form.jsx';
 import Footer from '../components/Footer';
@@ -15,6 +16,13 @@ const RequestQuoteHero = () => {
         className="relative min-h-[calc(100vh-1.25rem)] md:min-h-[calc(100vh-1.5rem)] w-full bg-black overflow-hidden flex flex-col"
       >
         <div className="absolute inset-0">
+          <Image
+            src="/images/isaac/F4L TZ (9).webp"
+            alt="Producer filming on location for BigzImage"
+            fill
+            priority
+            className="object-cover object-center"
+          />
           <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-black to-neutral-950" />
           <div className="absolute -top-40 -left-56 w-[620px] h-[620px] rounded-full bg-[#475569] blur-[180px]" />
           <div className="absolute bottom-[-160px] right-[-120px] w-[720px] h-[720px] rounded-full bg-[#0f172a] blur-[220px]" />
@@ -28,9 +36,6 @@ const RequestQuoteHero = () => {
           <h1 className="text-white font-medium tracking-[-0.02em] leading-[1.05] max-w-[26ch] text-[32px] sm:text-[42px] md:text-[52px] lg:text-[60px]">
             Tell us what you need. We&apos;ll tailor the quote.
           </h1>
-          <p className="mt-8 text-white/90 text-[16px] md:text-[18px] max-w-[58ch] leading-relaxed">
-            Share the essentials—services, timeline, and outcomes—and our producers will respond within two business days with a clear, tailored proposal for your organisation.
-          </p>
         </div>
       </section>
     </div>

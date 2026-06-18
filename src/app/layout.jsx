@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body className="bg-black text-white antialiased">
         <Navigation />
         <main className="pt-[92px] md:pt-[110px] min-h-screen">{children}</main>
