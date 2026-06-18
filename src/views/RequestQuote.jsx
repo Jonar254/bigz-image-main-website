@@ -4,7 +4,8 @@ import React, { useRef } from 'react';
 import Image from 'next/image';
 import ImageHeroNav from '../components/ImageHeroNav';
 import RequestQuoteForm from '../components/forms/request-quote-form.jsx';
-import Footer from '../components/Footer';
+import Testimonial from '../components/Testimonial';
+import CTA from '../components/CTA';
 
 const RequestQuoteHero = () => {
   const heroRef = useRef(null);
@@ -82,7 +83,8 @@ const RequestQuote = () => (
     <RequestQuoteHero />
     <RequestQuoteIntro />
     <RequestQuoteFormSection />
-    <Footer />
+    <Testimonial />
+    <CTA />
   </div>
 );
 
