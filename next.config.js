@@ -6,6 +6,12 @@ const nextConfig = {
     formats: ['image/webp'],
     qualities: [70, 75, 80],
   },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  experimental: {
+    optimizeCss: true,
+  },
 };
 
 module.exports = nextConfig;

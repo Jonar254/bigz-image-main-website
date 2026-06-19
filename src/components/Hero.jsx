@@ -15,8 +15,9 @@ const HeroBackgroundVideo = () => (
       muted
       playsInline
       poster="/images/community-webp/9B3A0434.webp"
+      preload="auto"
     >
-      <source src="/optimized.mp4" type="video/mp4" />
+      <source src="/optimized-website-reel.mp4" type="video/mp4" />
     </video>
     <div className="absolute inset-0 bg-black/45" />
   </div>
