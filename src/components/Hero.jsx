@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import ImageHeroNav from './ImageHeroNav';
+import Head from 'next/head';
 
 const SLIDE_INTERVAL_MS = 3500;
 const VISIBLE_SLIDES = 3;
