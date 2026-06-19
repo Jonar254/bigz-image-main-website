@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const LOGO_CARDS = [
   { id: 'schools2030-full', name: 'Schools2030', image: '/images/client-logo/1642357279-schools-2030-logo-cmyk-01-768x399.webp' },
   { id: 'aga-khan', name: 'Aga Khan Foundation', image: '/images/client-logo/Aga%20Khan%20Foundation%20LOGO_raster.webp', size: 'small' },
@@ -12,19 +14,24 @@ const LOGO_CARDS = [
 ];
 
 const LogoTile = ({ name, image, size = 'default' }) => {
-  const sizeClasses = {
-    small: 'max-w-[70%] max-h-[70%] md:max-w-[75%] md:max-h-[75%]',
-    featured: 'max-w-[88%] max-h-[88%] md:max-w-[92%] md:max-h-[92%]',
-    default: 'max-w-[78%] max-h-[78%] md:max-w-[82%] md:max-h-[82%]',
-  }[size] || 'max-w-[78%] max-h-[78%] md:max-w-[82%] md:max-h-[82%]';
+  const dimensionBySize = {
+    small: { width: 180, height: 110 },
+    featured: { width: 220, height: 140 },
+    default: { width: 200, height: 120 },
+  };
+  const { width, height } = dimensionBySize[size] || dimensionBySize.default;
   return (
     <div className="bg-white aspect-[16/9] flex items-center justify-center p-4 sm:p-5 md:p-6 lg:p-8">
-      <img 
-        src={image} 
-        alt={`${name} logo`} 
-        className={`${sizeClasses} h-full w-full object-contain`}
+      <Image
+        src={image}
+        alt={`${name} logo`}
+        width={width}
+        height={height}
+        className="h-full w-full object-contain"
+        sizes="(max-width: 640px) 40vw, (max-width: 1024px) 24vw, 16vw"
+        quality={70}
         loading="lazy"
-        decoding="async"
+        priority={false}
       />
     </div>
   );
