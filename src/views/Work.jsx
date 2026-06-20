@@ -13,26 +13,8 @@ import { ArrowUpRight } from 'lucide-react';
 import CTA from '../components/CTA';
 import Testimonial from '../components/Testimonial';
 import useReveal from '../hooks/useReveal';
+import YoutubeLitePlayer from '../components/YoutubeLitePlayer';
 
-const extractYouTubeId = (url) => {
-  if (!url) {
-    return null;
-  }
-
-  const match = url.match(/(?:embed\/|watch\?v=|youtu\.be\/)([\w-]{11})/);
-  return match ? match[1] : null;
-};
-
-const buildYouTubeThumbnailCandidates = (url) => {
-  const videoId = extractYouTubeId(url);
-  if (!videoId) {
-    return [];
-  }
-
-  return ['maxresdefault', 'sddefault', 'hqdefault'].map(
-    (quality) => `https://img.youtube.com/vi/${videoId}/${quality}.jpg`,
-  );
-};
 
 const ProjectCard = ({ project, onHover, onLeave, priority = false }) => {
   const { ref, inView } = useReveal();
@@ -86,59 +68,7 @@ const ProjectCard = ({ project, onHover, onLeave, priority = false }) => {
 
 const VideoProjectCard = ({ project, onHover, onLeave }) => {
   const { ref, inView } = useReveal();
-  const [showVideo, setShowVideo] = useState(false);
-  const [thumbnailSrc, setThumbnailSrc] = useState(project.image);
   const detailHref = project.href || getProjectPath(project.slug);
-
-  useEffect(() => {
-    let isMounted = true;
-    const candidates = buildYouTubeThumbnailCandidates(project.videoUrl);
-
-    if (!candidates.length) {
-      if (isMounted) {
-        setThumbnailSrc(project.image);
-      }
-      return () => {
-        isMounted = false;
-      };
-    }
-
-    if (isMounted) {
-      setThumbnailSrc(project.image);
-    }
-
-    let index = 0;
-
-    const loadNext = () => {
-      if (!isMounted) {
-        return;
-      }
-
-      if (index >= candidates.length) {
-        setThumbnailSrc(project.image);
-        return;
-      }
-
-      const candidate = candidates[index];
-      const img = new window.Image();
-      img.src = candidate;
-      img.onload = () => {
-        if (isMounted) {
-          setThumbnailSrc(candidate);
-        }
-      };
-      img.onerror = () => {
-        index += 1;
-        loadNext();
-      };
-    };
-
-    loadNext();
-
-    return () => {
-      isMounted = false;
-    };
-  }, [project.image, project.videoUrl]);
 
   return (
     <div className="w-full">
@@ -151,40 +81,12 @@ const VideoProjectCard = ({ project, onHover, onLeave }) => {
         onMouseEnter={onHover}
         onMouseLeave={onLeave}
       >
-        {showVideo && project.videoUrl ? (
-          <iframe
-            src={project.videoUrl}
-            title={project.title}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-            className="absolute inset-0 w-full h-full"
-          />
-        ) : (
-          <>
-            <img
-              src={thumbnailSrc}
-              alt={project.title}
-              loading="lazy"
-              decoding="async"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
-            <button
-              onClick={() => setShowVideo(true)}
-              className="absolute inset-0 flex items-center justify-center group cursor-pointer"
-              type="button"
-            >
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[16px] border-l-black border-b-[10px] border-b-transparent ml-1" />
-              </div>
-            </button>
-            <div className="absolute top-4 left-4 text-white text-[12px] uppercase tracking-[0.18em] z-10">
-              <span>{project.workLabel || project.category || 'Video'}</span>
-            </div>
-          </>
-        )}
+        <YoutubeLitePlayer
+          videoUrl={project.videoUrl}
+          title={project.title}
+          fallbackImage={project.image}
+          label={project.workLabel || project.category || 'Video'}
+        />
       </div>
       <div
         className={`mt-5 md:mt-6 transition-all duration-700 delay-100 ${
