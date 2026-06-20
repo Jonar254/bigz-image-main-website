@@ -1,135 +1,39 @@
 "use client";
 
-import Link from 'next/link';
 import Image from 'next/image';
-import { useEffect, useState, useRef } from 'react';
+import { useRef } from 'react';
 import { corporateVideographyProjects } from '../data/projects';
 import { Video } from 'lucide-react';
 import CTA from '../components/CTA';
 import ImageHeroNav from '../components/ImageHeroNav';
 import useReveal from '../hooks/useReveal';
+import YoutubeLitePlayer from '../components/YoutubeLitePlayer';
 
-const extractYouTubeId = (url) => {
-  if (!url) {
-    return null;
-  }
-
-  const match = url.match(/(?:embed\/|watch\?v=|youtu\.be\/)([\w-]{11})/);
-  return match ? match[1] : null;
-};
-
-const buildYouTubeThumbnailCandidates = (url) => {
-  const videoId = extractYouTubeId(url);
-  if (!videoId) {
-    return [];
-  }
-
-  return ['maxresdefault', 'sddefault', 'hqdefault'].map(
-    (quality) => `https://img.youtube.com/vi/${videoId}/${quality}.jpg`,
-  );
-};
-
-const VideoProjectCard = ({ project, onHover, onLeave }) => {
+const VideoProjectCard = ({ project }) => {
   const { ref, inView } = useReveal();
-  const [showVideo, setShowVideo] = useState(false);
-  const [thumbnailSrc, setThumbnailSrc] = useState(project.image);
-
-  useEffect(() => {
-    let isMounted = true;
-    const candidates = buildYouTubeThumbnailCandidates(project.videoUrl);
-
-    if (!candidates.length) {
-      if (isMounted) {
-        setThumbnailSrc(project.image);
-      }
-      return () => {
-        isMounted = false;
-      };
-    }
-
-    if (isMounted) {
-      setThumbnailSrc(project.image);
-    }
-
-    let index = 0;
-
-    const loadNext = () => {
-      if (!isMounted) {
-        return;
-      }
-
-      if (index >= candidates.length) {
-        setThumbnailSrc(project.image);
-        return;
-      }
-
-      const candidate = candidates[index];
-      const img = new window.Image();
-      img.src = candidate;
-      img.onload = () => {
-        if (isMounted) {
-          setThumbnailSrc(candidate);
-        }
-      };
-      img.onerror = () => {
-        index += 1;
-        loadNext();
-      };
-    };
-
-    loadNext();
-
-    return () => {
-      isMounted = false;
-    };
-  }, [project.image, project.videoUrl]);
 
   return (
     <div className="w-full">
       <div
         ref={ref}
-        className={`relative w-full overflow-hidden bg-neutral-100 transition-all duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        className={`group relative w-full overflow-hidden bg-neutral-100 transition-all duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
         style={{ aspectRatio: '16/9' }}
-        onMouseEnter={onHover}
-        onMouseLeave={onLeave}
       >
-        {showVideo && project.videoUrl ? (
-          <iframe
-            src={project.videoUrl}
-            title={project.title}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-            className="absolute inset-0 w-full h-full"
-          />
-        ) : (
-          <>
-            <img
-              src={thumbnailSrc}
-              alt={project.title}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
-            <button
-              onClick={() => setShowVideo(true)}
-              className="absolute inset-0 flex items-center justify-center group cursor-pointer"
-            >
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[16px] border-l-black border-b-[10px] border-b-transparent ml-1" />
-              </div>
-            </button>
-            <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-white text-[12px] uppercase tracking-[0.18em] z-10">
-              <span className="flex items-center gap-2">
-                <Video size={14} />
-                {project.category}
-              </span>
-              <span className="opacity-70">{project.client}</span>
-            </div>
-          </>
-        )}
+        <YoutubeLitePlayer
+          videoUrl={project.videoUrl}
+          title={project.title}
+          posterFallback={project.image}
+          className="absolute inset-0"
+        />
+        <div className="pointer-events-none absolute top-4 left-4 right-4 flex items-center justify-between text-white text-[12px] uppercase tracking-[0.18em] z-10">
+          <span className="flex items-center gap-2">
+            <Video size={14} />
+            {project.category}
+          </span>
+          {project.client && <span className="opacity-70">{project.client}</span>}
+        </div>
       </div>
       <div
         className={`mt-5 md:mt-6 transition-all duration-700 delay-100 ${
@@ -221,40 +125,27 @@ const buildRows = (projects) => {
   return rows;
 };
 
-const ProjectRow = ({ row, onHover, onLeave }) => {
+const ProjectRow = ({ row }) => {
   if (row.length === 1) {
     const project = row[0];
     return (
       <div className="w-full">
-        <VideoProjectCard
-          project={project}
-          onHover={() => onHover(project.id)}
-          onLeave={onLeave}
-        />
+        <VideoProjectCard project={project} />
       </div>
     );
   }
   const [a, b] = row;
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 lg:gap-12 items-start">
-      <VideoProjectCard
-        project={a}
-        onHover={() => onHover(a.id)}
-        onLeave={onLeave}
-      />
+      <VideoProjectCard project={a} />
       {b && (
-        <VideoProjectCard
-          project={b}
-          onHover={() => onHover(b.id)}
-          onLeave={onLeave}
-        />
+        <VideoProjectCard project={b} />
       )}
     </div>
   );
 };
 
 const CorporateVideography = () => {
-  const [hoveredId, setHoveredId] = useState(null);
   const rows = buildRows(corporateVideographyProjects);
 
   return (
@@ -267,8 +158,6 @@ const CorporateVideography = () => {
             <ProjectRow
               key={row.map((p) => p.id).join('-')}
               row={row}
-              onHover={setHoveredId}
-              onLeave={() => setHoveredId(null)}
             />
           ))}
         </div>

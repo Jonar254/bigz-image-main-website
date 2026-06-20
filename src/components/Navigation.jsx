@@ -77,20 +77,22 @@ const DesktopNav = ({ textColor, pathname }) => (
   </nav>
 );
 
-const MobileMenu = ({ mode, textColor, onClose }) => (
-  <div className={`md:hidden px-6 py-6 border-t ${getMobileMenuBg(mode)}`}>
-    <nav className="flex flex-col gap-5">
-      {navLinks.map((link) => (
-        <NavItem
-          key={link.label}
-          link={link}
-          textColor={textColor}
-          isActive={false}
-          onClick={onClose}
-          sizeClass="text-[20px] font-semibold tracking-[0.02em]"
-        />
-      ))}
-    </nav>
+const MobileMenu = ({ textColor, onClose }) => (
+  <div className="fixed inset-0 bg-black/95 backdrop-blur-md z-40 md:hidden">
+    <div className="flex flex-col h-full">
+      <div className="flex flex-col items-center justify-center flex-grow space-y-8">
+        {navLinks.map((link) => (
+          <NavItem
+            key={link.label}
+            link={link}
+            textColor={textColor}
+            isActive={false}
+            onClick={onClose}
+            sizeClass="text-[24px] font-semibold tracking-[0.02em]"
+          />
+        ))}
+      </div>
+    </div>
   </div>
 );
 
@@ -109,6 +111,12 @@ const Navigation = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
 
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.body.style.overflow = mobileOpen ? 'hidden' : 'auto';
+    }
+  }, [mobileOpen]);
+
   // Don't render on homepage or pages with ImageHeroNav
   if (pathname === '/' || isHeroPage(pathname)) {
     return null;
@@ -119,40 +127,41 @@ const Navigation = () => {
   const bgClass = getBgClass({ mode, scrolled });
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${bgClass}`}
-    >
-      <div className="max-w-[1500px] mx-auto px-6 md:px-12">
-        <div className="flex items-center justify-between py-6">
-          <Link href="/" className="flex items-center" aria-label="BigzImage home">
-            <Image
-              src="/images/Logo/Transparent Background/PNGs/bigz-logo-one.webp"
-              alt="BigzImage logo"
-              width={220}
-              height={68}
-              className="w-auto h-12"
-              loading="eager"
-              priority
-            />
-          </Link>
-          <DesktopNav textColor={textColor} pathname={pathname} />
-          <button
-            className={`md:hidden ${textColor}`}
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${bgClass}`}
+      >
+        <div className="max-w-[1500px] mx-auto px-6 md:px-12">
+          <div className="flex items-center justify-between py-6">
+            <Link href="/" className="flex items-center" aria-label="BigzImage home">
+              <Image
+                src="/images/Logo/Transparent Background/PNGs/bigz-logo-one.webp"
+                alt="BigzImage logo"
+                width={220}
+                height={68}
+                className="w-auto h-12"
+                loading="eager"
+                priority
+              />
+            </Link>
+            <DesktopNav textColor={textColor} pathname={pathname} />
+            <button
+              className={`md:hidden ${textColor} z-50 relative`}
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
-        {mobileOpen && (
-          <MobileMenu
-            mode={mode}
-            textColor={textColor}
-            onClose={() => setMobileOpen(false)}
-          />
-        )}
-      </div>
-    </header>
+      </header>
+      {mobileOpen && (
+        <MobileMenu
+          textColor={textColor}
+          onClose={() => setMobileOpen(false)}
+        />
+      )}
+    </>
   );
 };
 

@@ -66,6 +66,12 @@ const ImageHeroNav = ({ heroRef, offset = 80, className = '' }) => {
   const scrolled = useScrolled(offset);
   const pastHero = useBeyondHero(heroRef);
 
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.body.style.overflow = mobileOpen ? 'hidden' : 'auto';
+    }
+  }, [mobileOpen]);
+
   const translateClass = scrolled
     ? 'translate-y-0'
     : 'translate-y-[1.75rem] md:translate-y-[2.75rem]';
@@ -75,51 +81,55 @@ const ImageHeroNav = ({ heroRef, offset = 80, className = '' }) => {
     : 'bg-transparent border-transparent backdrop-blur-0';
 
   return (
-    <div
-      className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-500 ease-out ${translateClass} ${surfaceClass} will-change-transform ${className}`}
-    >
-      <div className="max-w-[1500px] mx-auto px-6 md:px-12">
-        <div className="flex items-center justify-between py-6">
-          <Link href="/" className="flex items-center" aria-label="BigzImage home">
-            <Image
-              src="/images/Logo/Transparent Background/PNGs/bigz-logo-one.webp"
-              alt="BigzImage logo"
-              width={220}
-              height={68}
-              className="w-auto h-12"
-              loading="eager"
-              priority
-            />
-          </Link>
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <HeroNavItem key={link.label} link={link} />
-            ))}
-          </nav>
-          <button
-            className="md:hidden text-white"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+    <>
+      <div
+        className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-500 ease-out ${translateClass} ${surfaceClass} will-change-transform ${className}`}
+      >
+        <div className="max-w-[1500px] mx-auto px-6 md:px-12">
+          <div className="flex items-center justify-between py-6">
+            <Link href="/" className="flex items-center" aria-label="BigzImage home">
+              <Image
+                src="/images/Logo/Transparent Background/PNGs/bigz-logo-one.webp"
+                alt="BigzImage logo"
+                width={220}
+                height={68}
+                className="w-auto h-12"
+                loading="eager"
+                priority
+              />
+            </Link>
+            <nav className="hidden md:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <HeroNavItem key={link.label} link={link} />
+              ))}
+            </nav>
+            <button
+              className="md:hidden text-white z-50 relative"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
-        {mobileOpen && (
-          <div className="md:hidden bg-black/95 backdrop-blur-md px-6 py-6 border-t border-white/10">
-            <nav className="flex flex-col gap-5">
+      </div>
+      {mobileOpen && (
+        <div className="fixed inset-0 bg-black/95 backdrop-blur-md z-40 md:hidden">
+          <div className="flex flex-col h-full">
+            <div className="flex flex-col items-center justify-center flex-grow space-y-8">
               {navLinks.map((link) => (
                 <HeroNavItem
                   key={link.label}
                   link={link}
-                  sizeClass="text-[20px] font-semibold tracking-[0.02em]"
+                  sizeClass="text-[24px] font-semibold tracking-[0.02em]"
                   onClick={() => setMobileOpen(false)}
                 />
               ))}
-            </nav>
+            </div>
           </div>
-        )}
-      </div>
-    </div>
+        </div>
+      )}
+    </>
   );
 };
 
