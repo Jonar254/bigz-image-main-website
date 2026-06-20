@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-black text-white antialiased">
         <Navigation />
-        <main className="pt-[92px] md:pt-[110px] min-h-screen">{children}</main>
+        <main className="md:pt-[110px] min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

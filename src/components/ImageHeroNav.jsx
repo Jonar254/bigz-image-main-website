@@ -74,7 +74,7 @@ const ImageHeroNav = ({ heroRef, offset = 80, className = '' }) => {
 
   const translateClass = scrolled
     ? 'translate-y-0'
-    : 'translate-y-[1.75rem] md:translate-y-[2.75rem]';
+    : 'md:translate-y-[2.75rem]';
 
   const surfaceClass = pastHero
     ? 'bg-black/95 backdrop-blur-md border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.4)]'

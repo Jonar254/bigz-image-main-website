@@ -75,10 +75,10 @@ const Hero = () => {
   // });
 
   return (
-    <div className="bg-white pt-8 md:pt-10 pb-4 md:pb-6 px-7 md:px-10 -mt-[92px] md:-mt-[110px]">
+    <div className="bg-white md:pt-10 md:pb-6 md:px-10 md:-mt-[110px]">
       <section
         ref={heroRef}
-        className="relative min-h-[calc(100vh-1.25rem)] md:min-h-[calc(100vh-1.5rem)] w-full bg-black overflow-hidden flex flex-col"
+        className="relative min-h-screen md:min-h-[calc(100vh-1.5rem)] w-full bg-black overflow-hidden flex flex-col"
       >
         <HeroBackgroundVideo />
         <HeroBackgroundLayers />
