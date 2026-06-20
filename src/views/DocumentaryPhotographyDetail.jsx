@@ -149,7 +149,7 @@ const DocumentaryPhotographyDetail = ({ project }) => {
             <div className="mt-12">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center h-12 px-8 rounded-full border border-[#1b1e1b] text-[#1b1e1b] text-sm font-medium tracking-tight transition-all hover:bg-[#1b1e1b] hover:text-white"
+                className="inline-flex items-center justify-center h-12 px-8 border border-[#1b1e1b] text-[#1b1e1b] text-sm font-medium tracking-tight transition-all hover:bg-[#1b1e1b] hover:text-white"
               >
                 Request Coverage
               </Link>
