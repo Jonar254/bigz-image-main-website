@@ -341,7 +341,7 @@ const ModernFaq = () => {
 
                         <div className="p-4 bg-white border-t border-neutral-200">
                           <div className="flex items-center gap-3 bg-neutral-100 rounded-full px-4 py-2">
-                            <span className="text-black text-sm lg:text-base flex-1">Isaac is responding...</span>
+                            <span className="text-black text-sm lg:text-base flex-1">Bigz Image responding...</span>
                             <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center">
                               <Zap className="w-3 h-3 text-white" />
                             </div>
