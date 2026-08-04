@@ -171,7 +171,7 @@ const ModernFaq = () => {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              How our storytelling process works
+              Frequently Asked Questions
             </div>
 
             <h2
@@ -179,9 +179,9 @@ const ModernFaq = () => {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              See how we guide partners from{' '}
+              Everything you need to{' '}
               <span className="relative inline-block italic">
-                <span className="relative z-10">discovery to delivery</span>
+                <span className="relative z-10">know</span>
                 <span className="absolute inset-x-[-4px] bottom-1 h-2 bg-[#f6ae2d]/50" aria-hidden="true" />
               </span>
             </h2>
@@ -191,11 +191,12 @@ const ModernFaq = () => {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              These live chat snippets mirror how we onboard NGOs, align on goals, and deliver documentary assets that move donors to act.
+              Common questions about our services, process, and how we work with organizations to create impactful visual stories.
             </p>
           </div>
 
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20 max-w-7xl mx-auto">
+            {/**
             <div className="w-full lg:w-1/2 flex flex-col justify-center lg:h-[600px] space-y-6 lg:space-y-8 order-2 lg:order-1">
               <div
                 className={`transition-all duration-1000 delay-600 ${
@@ -236,9 +237,10 @@ const ModernFaq = () => {
                 </div>
               </div>
             </div>
+             */}
 
             <div className="w-full lg:w-1/2 flex justify-center order-1 lg:order-2">
-              <div className="max-w-md w-full">
+              <div className="max-w-lg w-full">
                 <div
                   className={`relative transition-all duration-1000 delay-600 ${
                     isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -266,7 +268,7 @@ const ModernFaq = () => {
                               className="w-8 h-8 rounded-full object-cover mr-2 mt-1 flex-shrink-0"
                             />
                             <div className="flex-1">
-                              <h3 className="font-semibold text-sm">Isaac Njagi — CEO Bigz Image</h3>
+                              <h3 className="font-semibold text-sm">Bigz Image</h3>
                               {/**
                                 <p className="text-xs text-slate-300">Chat with +254 716 696 672</p>
                                */}
@@ -280,7 +282,7 @@ const ModernFaq = () => {
 
                         <div
                           ref={chatContainerRef}
-                          className="h-96 overflow-y-scroll p-4 space-y-3 bg-neutral-50 [scrollbar-width:none] [-ms-overflow-style:'none'] [mask-image:linear-gradient(to_bottom,transparent,black_5%,black_95%,transparent)] [&::-webkit-scrollbar]:hidden"
+                          className="h-[28rem] overflow-y-scroll p-4 space-y-3 bg-neutral-50 [scrollbar-width:none] [-ms-overflow-style:'none'] [mask-image:linear-gradient(to_bottom,transparent,black_5%,black_95%,transparent)] [&::-webkit-scrollbar]:hidden"
                         >
                           {displayedMessages.map((message, index) => (
                             <div
