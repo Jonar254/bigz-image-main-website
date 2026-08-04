@@ -16,7 +16,7 @@ const ProblemSolution = () => {
       <div className="max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
         <div className="p-6 md:p-8 bg-neutral-50 rounded-3xl border border-black/5">
           <div className="h-full p-4 md:p-6 bg-neutral-50 rounded-xl border-l-[6px] border-[#0b3c5d] flex flex-col">
-            <p className="text-neutral-500 text-[14px] tracking-[0.24em] uppercase mb-5">The Challenge</p>
+            <p className="text-black text-[15px] tracking-[0.24em] uppercase mb-5">The Challenge</p>
             <h3 className="text-[28px] md:text-[36px] font-medium tracking-[-0.02em] leading-[1.1] mb-6">
               Impact is happening—but it isn&apos;t always being seen.
             </h3>
@@ -39,7 +39,7 @@ const ProblemSolution = () => {
 
         <div className="p-6 md:p-8 bg-[#0b3c5d] rounded-3xl border border-black/5 text-white">
           <div className="h-full p-4 md:p-6 bg-[#0b3c5d] rounded-xl border-l-[6px] border-[#f6ae2d] flex flex-col">
-            <p className="text-white text-[14px] tracking-[0.24em] uppercase mb-5">Our Solution</p>
+            <p className="text-white text-[15px] tracking-[0.24em] uppercase mb-5">Our Solution</p>
             <h3 className="text-[28px] md:text-[36px] font-medium tracking-[-0.02em] leading-[1.1] mb-6">
               We turn impact into stories people understand and remember.
             </h3>
