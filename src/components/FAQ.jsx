@@ -10,54 +10,54 @@ import {
 
 const faqs = [
   {
-    question: 'What does BigzImage specialize in?',
-    answer:
-      'BigzImage specializes in documentary filmmaking, documentary photography, and strategic visual storytelling for NGOs, development organizations, research institutions, and international partners. We help organizations communicate programme impact through compelling visual narratives that engage donors, partners, and stakeholders.',
-  },
-  {
     question: 'How can visual storytelling help our organization?',
     answer:
-      'Visual storytelling transforms complex programme data into relatable human stories. It helps increase donor engagement, strengthen organizational credibility, improve fundraising efforts, and make reporting more accessible to diverse audiences.',
+      'Visual storytelling turns programme results into compelling stories that engage donors, partners, and communities. It increases visibility and creates content for reports, social media, fundraising, and stakeholder engagement.',
   },
   {
-    question: 'What types of organizations do you work with?',
+    question: 'Who do you work with?',
     answer:
-      'We work with non-governmental organizations (NGOs), international development agencies, research institutions, foundations, donor-funded projects, and organizations focused on social impact and community development.',
+      'We work with NGOs, foundations, research institutions, development agencies, and businesses delivering social impact programmes across East Africa.',
   },
   {
     question: 'What services do you offer?',
     answer:
-      'Our services include documentary film production, documentary photography, conference and event coverage, livestream services, staff portraits, and customized visual content packages tailored to your communication and reporting needs.',
+      'We provide documentary filmmaking, documentary photography, event coverage, interviews, staff portraits, livestreaming, and campaign-ready content for NGOs and development partners.',
   },
   {
     question: 'Do you travel to project locations?',
     answer:
-      'Yes. We work across diverse field environments and can travel to project sites, communities, conferences, workshops, and events throughout Africa to document programme implementation, outcomes, and impact stories.',
+      'Yes. We regularly work across Kenya, Tanzania, and Uganda, and can travel to other locations based on project needs.',
   },
   {
-    question: 'How do you ensure ethical and respectful storytelling?',
+    question: 'How do you ensure ethical storytelling?',
     answer:
-      'We follow a people-first approach that prioritizes dignity, informed consent, authenticity, and respect for all participants. Our goal is to amplify community voices while ensuring accurate and ethical representation.',
-  },
-  {
-    question: 'Can you create content for donor reports and fundraising campaigns?',
-    answer:
-      'Absolutely. Our visual content is designed to support donor reporting, fundraising campaigns, annual reports, impact reports, websites, social media campaigns, and stakeholder communications.',
+      'We follow informed consent and safeguarding practices, ensuring every story is told with dignity, cultural sensitivity, and respect.',
   },
   {
     question: 'What is your production process?',
     answer:
-      'Our process includes four stages: discovery and conceptual meetings, strategy and planning, field production and post-production, and final delivery. This collaborative approach ensures the content aligns with your objectives and communication goals.',
+      'Our process is simple: Discover, Plan, Produce, Deliver. We understand your goals, create a storytelling plan, produce high-quality content, and deliver polished assets ready for reporting and communications.',
   },
   {
-    question: 'What deliverables can we expect?',
+    question: 'What deliverables will we receive?',
     answer:
-      'Depending on your needs, deliverables may include documentary films, short impact videos, professional photographs, edited content for digital platforms, raw footage, event coverage materials, staff portraits, and customized communication assets.',
+      'Depending on your project, deliverables may include photography, documentary films, edited videos, raw footage (on request), and content optimized for reports, websites, and social media.',
   },
   {
-    question: 'How do we get started with BigzImage?',
+    question: 'How do we get started?',
     answer:
-      'Getting started is simple. Book a discovery call or submit a request for quotation with details about your project, objectives, and scope of work. We will review your needs and recommend the most suitable storytelling approach and content package.',
+      'Contact us through our website or by phone to schedule a discovery call. We will discuss your goals, timeline, and budget, then recommend the best solution for your project.',
+  },
+  {
+    question: 'Can your services be included in grant budgets?',
+    answer:
+      'Yes. We work with donor-funded programmes and provide quotations, invoices, and documentation that meet grant and procurement requirements.',
+  },
+  {
+    question: 'Do you offer flexible packages?',
+    answer:
+      'Yes. We tailor our packages to your budget and project needs, from one-day event coverage to long-term documentary productions, helping you maximize impact within your available funding.',
   },
 ];
 

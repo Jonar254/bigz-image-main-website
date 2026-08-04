@@ -7,15 +7,15 @@ const PRODUCER_AVATAR = "/images/isaac/KingKiddPH-113.webp";
 
 const conversations = [
   {
-    title: "About BigzImage",
+    title: "Frequently Asked Questions",
     messages: [
       {
-        text: "What does BigzImage do?",
+        text: "How can visual storytelling help our organization?",
         sender: "customer",
         delay: 0,
       },
       {
-        text: "BigzImage creates documentary films, photography, and visual reports that help NGOs and development organizations make their impact visible to donors and stakeholders.",
+        text: "Visual storytelling turns programme results into compelling stories that engage donors, partners, and communities. It increases visibility and creates content for reports, social media, fundraising, and stakeholder engagement.",
         sender: "ai",
         delay: 1000,
       },
@@ -25,89 +25,49 @@ const conversations = [
         delay: 2500,
       },
       {
-        text: "We primarily support NGOs, development partners, and research institutions across Africa that need to showcase programmes and results clearly.",
+        text: "We work with NGOs, foundations, research institutions, development agencies, and businesses delivering social impact programmes across East Africa.",
         sender: "ai",
         delay: 3500,
       },
-      {
-        text: "What problem are you solving?",
-        sender: "customer",
-        delay: 5000,
-      },
-      {
-        text: "Impact reports can feel too technical, so vital stories don’t always inspire action. We translate your data into human-centered narratives that unlock trust, funding, and momentum.",
-        sender: "ai",
-        delay: 6000,
-      },
-    ],
-  },
-  {
-    title: "Services & Results",
-    messages: [
       {
         text: "What services do you offer?",
         sender: "customer",
-        delay: 0,
-      },
-      {
-        text: "Documentary production, action photography, visual reporting, communication support, and event coverage—tailored for reports, campaigns, and digital platforms.",
-        sender: "ai",
-        delay: 1000,
-      },
-      {
-        text: "What results can we expect?",
-        sender: "customer",
-        delay: 2500,
-      },
-      {
-        text: "Our work boosts donor engagement, strengthens credibility, supports fundraising, and keeps stakeholders aligned with what’s happening on the ground.",
-        sender: "ai",
-        delay: 3500,
-      },
-      {
-        text: "What makes BigzImage different?",
-        sender: "customer",
         delay: 5000,
       },
       {
-        text: "We blend storytelling expertise with deep development-sector understanding. Every production is people-first, ethically grounded, and focused on outcomes—not just pretty visuals.",
+        text: "We provide documentary filmmaking, documentary photography, event coverage, interviews, staff portraits, livestreaming, and campaign-ready content for NGOs and development partners.",
         sender: "ai",
         delay: 6000,
       },
-    ],
-  },
-  {
-    title: "Operations & Next Steps",
-    messages: [
       {
-        text: "Do you work across multiple locations?",
+        text: "Do you travel to project locations?",
         sender: "customer",
-        delay: 0,
+        delay: 7500,
       },
       {
-        text: "Yes. We operate across different African countries and adapt quickly to local contexts, cultural nuances, and field realities.",
+        text: "Yes. We regularly work across Kenya, Tanzania, and Uganda, and can travel to other locations based on project needs.",
         sender: "ai",
-        delay: 1000,
+        delay: 8500,
       },
       {
-        text: "What’s included in your pricing packages?",
+        text: "How do you ensure ethical storytelling?",
         sender: "customer",
-        delay: 2500,
+        delay: 10000,
       },
       {
-        text: "Packages scale from focused shoots to full documentary production. Depending on scope, they include photography, video, multi-day fieldwork, social content, and ongoing support.",
+        text: "We follow informed consent and safeguarding practices, ensuring every story is told with dignity, cultural sensitivity, and respect.",
         sender: "ai",
-        delay: 3500,
+        delay: 11000,
       },
       {
-        text: "How do we get started?",
+        text: "What is your production process?",
         sender: "customer",
-        delay: 5000,
+        delay: 12500,
       },
       {
-        text: "Begin with a discovery call. We’ll align on your goals, audience, and timelines, then recommend the best approach to telling your story effectively.",
+        text: "Our process is simple: Discover, Plan, Produce, Deliver. We understand your goals, create a storytelling plan, produce high-quality content, and deliver polished assets ready for reporting and communications.",
         sender: "ai",
-        delay: 6000,
+        delay: 13500,
       },
     ],
   },
@@ -307,7 +267,9 @@ const ModernFaq = () => {
                             />
                             <div className="flex-1">
                               <h3 className="font-semibold text-sm">Isaac Njagi — CEO Bigz Image</h3>
-                              <p className="text-xs text-slate-300">Chat with +254 716 696 672</p>
+                              {/**
+                                <p className="text-xs text-slate-300">Chat with +254 716 696 672</p>
+                               */}
                             </div>
                             <div className="text-xs text-green-400 flex items-center gap-1">
                               <div className="w-2 h-2 bg-green-400 rounded-full" />
