@@ -25,12 +25,12 @@ const Home = () => {
       <Services />
       {/* <FeaturesSection /> */}
       {/* <Approach /> */}
-      {/* <WhyBigz />   <Results />*/}
+      {/* <WhyBigz />   <Results /><Articles />*/}
     
       
       <ModernFaq />
       <Testimonial />
-      <Articles />
+      
       <CTA />
     </>
   );
