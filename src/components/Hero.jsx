@@ -85,9 +85,8 @@ const Hero = () => {
         <ImageHeroNav heroRef={heroRef} />
 
         <div className="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-12 pt-32 md:pt-40">
-          <h1 className="text-white font-medium tracking-[-0.02em] leading-[1.05] max-w-[18ch] text-[30px] sm:text-[42px] md:text-[56px] lg:text-[70px]">
-            Making Impact Visible <br className="hidden md:block" /> Through Stories That Build Trust,
-            Mobilize Funding, and Drive Action
+          <h1 className="text-white font-medium tracking-[-0.02em] leading-[1.05] max-w-[22ch] text-[26px] sm:text-[34px] md:text-[44px] lg:text-[58px]">
+            Capturing authentic stories that inform,  inspire, and drive change.
           </h1>
           <div className="mt-10 flex flex-wrap gap-4">
             <a

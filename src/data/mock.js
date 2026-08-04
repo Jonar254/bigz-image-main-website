@@ -9,11 +9,11 @@ export const brandSlides = [
 ];
 
 export const stats = [
-  { value: '50+', label: 'Documentary & Impact Films Produced' },
-  { value: '3', label: 'Countries Documented Across Africa' },
-  { value: '10+', label: 'Organizations & Development Partners Supported' },
+  { value: '50+', label: 'Success stories documentaries' },
+  { value: '4', label: 'Countries across Africa' },
+  { value: '10+', label: 'Development Partners Supported' },
   { value: '100+', label: 'Programme Stories Captured' },
-  { value: '7+', label: 'Years Supporting NGO Communications' },
+  { value: '7+', label: 'Years of Experience' },
 ];
 
 export const featuredWorks = [

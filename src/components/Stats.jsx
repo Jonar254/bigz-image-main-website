@@ -11,7 +11,7 @@ const AnimatedHeadline = ({ progress }) => {
   const words = HEADLINE.split(' ');
   const total = words.length;
   return (
-    <p className="text-[26px] sm:text-[34px] md:text-[44px] lg:text-[54px] leading-[1.15] tracking-[-0.02em] font-medium max-w-[60ch] text-balance mx-auto text-center px-4">
+    <p className="text-[22px] sm:text-[30px] md:text-[38px] lg:text-[48px] leading-[1.15] tracking-[-0.02em] font-medium max-w-[60ch] text-balance mx-auto text-center px-4">
       {words.map((word, i) => {
         const lit = progress > i / total;
         const trailing = i < words.length - 1 ? ' ' : '';
@@ -32,11 +32,11 @@ const AnimatedHeadline = ({ progress }) => {
 };
 
 const StatItem = ({ value, label }) => (
-  <div className="flex flex-col items-center text-center min-w-[190px]">
-    <div className="text-[40px] sm:text-[50px] md:text-[60px] font-medium tracking-[-0.02em] leading-none">
+  <div className="flex flex-col items-center text-center min-w-[190px] text-[#0b3c5d]">
+    <div className="text-[40px] sm:text-[50px] md:text-[50px] font-medium tracking-[-0.02em] leading-none">
       {value}
     </div>
-    <div className="text-[13px] sm:text-[15px] text-neutral-500 mt-3 max-w-[20ch] tracking-tight">
+    <div className="text-[18px] sm:text-[18px] mt-3 max-w-[20ch] tracking-tight">
       {label}
     </div>
   </div>
