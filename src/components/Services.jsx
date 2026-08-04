@@ -14,13 +14,13 @@ const SERVICE_LINKS = {
 const SERVICE_PRESENTATION = {
   'corporate-events': {
     title: 'Corporate',
-    subtitle: 'professional moments &',
-    scriptText: 'storytelling',
+    subtitle: 'Professional Brand',
+    scriptText: 'Storytelling',
   },
   documentaries: {
     title: 'Documentaries',
-    subtitle: 'impact narratives &',
-    scriptText: 'change',
+    subtitle: 'Strategic Impact',
+    scriptText: 'Storytelling',
   },
 };
 
@@ -136,9 +136,9 @@ const Services = () => {
     <section id="services" className="bg-white text-black py-20 md:py-28 px-6 md:px-12">
       <div className="max-w-[1500px] mx-auto">
         <div className="mb-12 md:mb-16 max-w-3xl space-y-5">
-          <p className="text-neutral-500 text-xs sm:text-sm tracking-[0.3em] uppercase">What We Do</p>
+          <p className="text-neutral-500 text-xs sm:text-sm tracking-[0.3em] uppercase"></p>
           <h2 className="text-[28px] sm:text-[34px] md:text-[42px] font-medium tracking-[-0.02em] leading-[1.15]">
-            We deliver high-quality visual storytelling solutions that translate your work into compelling, evidence-driven narratives for donors, partners, and stakeholders.
+            What We Do
           </h2>
         </div>
 

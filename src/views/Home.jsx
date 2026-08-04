@@ -24,9 +24,9 @@ const Home = () => {
       {/* <FeaturedWorks /> */}
       <Services />
       {/* <FeaturesSection /> */}
-      <Approach />
-      <WhyBigz />
-      <Results />
+      {/* <Approach /> */}
+      {/* <WhyBigz />   <Results />*/}
+    
       
       <ModernFaq />
       <Testimonial />

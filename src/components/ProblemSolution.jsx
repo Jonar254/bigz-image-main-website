@@ -18,7 +18,7 @@ const ProblemSolution = () => {
           <div className="h-full p-4 md:p-6 bg-neutral-50 rounded-xl border-l-[6px] border-[#0b3c5d] flex flex-col">
             <p className="text-black text-[15px] tracking-[0.24em] uppercase mb-5">The Challenge</p>
             <h3 className="text-[28px] md:text-[36px] font-medium tracking-[-0.02em] leading-[1.1] mb-6">
-              Impact is happening—but it isn&apos;t always being seen.
+              Impact is happening but it isn&apos;t always being seen.
             </h3>
             <p className="text-[16px] md:text-[18px] text-neutral-700 leading-[1.7] mb-6">
               Many organizations are creating meaningful change but struggle to communicate their results in ways that engage donors, partners, and communities.

@@ -37,7 +37,7 @@ const LogoTile = ({ name, image, size = 'default' }) => {
   );
 };
 
-const BrandLogos = ({ title = 'Trusted by Global Brands', className = '' }) => (
+const BrandLogos = ({ title = 'Trusted by Development Partners', className = '' }) => (
   <section className={`bg-white text-black py-20 md:py-28 px-6 md:px-12 ${className}`}>
     <div className="max-w-[1500px] mx-auto">
       <h3 className="text-[26px] sm:text-[32px] md:text-[36px] font-medium tracking-[-0.01em] mb-8 md:mb-12">
