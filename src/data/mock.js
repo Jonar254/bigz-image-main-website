@@ -299,8 +299,8 @@ export const newsArticles = {
 export const testimonials = [
   {
     name: 'Anna Hadida',
-    role: 'Communications Officer – Aga Khan Foundation',
-    highlight: 'Isaac (Bigz Image) is an exceptional media consultant known for his creativity, professionalism, and high-quality work.',
+    role: 'Aga Khan Foundation',
+    highlight: 'Bigz Image is an exceptional media consultant known for his creativity, professionalism, and high-quality work.',
     body:
       'He consistently delivers content that aligns with brand identity and meets the highest standards. A collaborative team player, he is open to feedback, adaptable in any environment, and reliable even in challenging conditions. Highly recommended for anyone seeking a dedicated and skilled media consultant.',
     image:
@@ -308,7 +308,7 @@ export const testimonials = [
   },
   {
     name: 'Halima Shaaban',
-    role: 'National Coordinator – Schools2030 Kenya',
+    role: 'Schools2030 - Kenya',
     highlight: 'Working with Bigz Images was a great experience.',
     body:
       'They demonstrated professionalism, attention to detail, and a calm, solution-oriented approach. Their flexibility and creativity stood out, as they adapted to challenges and last-minute requests without compromising quality—making them a valuable partner in telling impactful stories.',
@@ -317,7 +317,7 @@ export const testimonials = [
   },
   {
     name: 'Maria Kisanko',
-    role: 'Marketing and Communications Coordinator',
+    role: 'Aga Khan University - Tanzania',
     highlight: 'Bigz Image, led by Isaac and his team, delivered a highly professional and collaborative experience.',
     body:
       'They helped AKU clearly showcase the impact of the Foundations for Learning project (2022–2025) across Tanzania, Kenya, and Uganda. The work was completed on time, and their strong storytelling skills brought our key messages to life. Bigz Image is an excellent choice for clear, impactful communication.',
@@ -326,7 +326,7 @@ export const testimonials = [
   },
   {
     name: 'Joseph Wachira',
-    role: 'Regional Prevention Coordinator – Coast',
+    role: 'The AIDS Healthcare Foundation',
     highlight: 'Bigz Images delivered exceptional photography and videography during AHF calendar events.',
     body:
       'Their professionalism, creativity, and attention to detail ensured key moments and emotions were captured through compelling visual stories. Reliable and collaborative, they consistently produced high-quality content that has strengthened how we showcase our impact. Highly recommended for professional, creative visual storytelling.',

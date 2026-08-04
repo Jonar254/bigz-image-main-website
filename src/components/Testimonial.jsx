@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { testimonials } from '../data/mock';
 import useScrollProgress from '../hooks/useScrollProgress';
 
@@ -17,7 +17,7 @@ const AnimatedQuote = ({ words, progress, isTransitioning, isActive, className =
         ”
       </span>
       <p
-        className={`relative z-10 text-[22px] sm:text-[28px] md:text-[34px] lg:text-[40px] leading-[1.3] tracking-[-0.02em] font-medium transition-all duration-500 ${
+        className={`relative z-10 text-[20px] sm:text-[26px] md:text-[32px] lg:text-[38px] leading-[1.3] tracking-[-0.02em] font-medium transition-all duration-500 ${
           isActive ? (isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0') : 'opacity-0 translate-y-2'
         }`}
       >
@@ -143,7 +143,7 @@ const Testimonial = () => {
                   const isActive = index === activeIndex;
                   return (
                     <div key={item.name} className="flex-[0_0_100%] pr-2 md:pr-4">
-                      <Quote className="w-12 h-12 text-[#f6ae2d]/70 mb-6" />
+                      <span className="inline-block text-[80px] leading-none text-[#f6ae2d]/70 mb-6" aria-hidden="true">“</span>
                       <AnimatedQuote
                         words={wordsForSlide}
                         progress={progress}
@@ -151,16 +151,16 @@ const Testimonial = () => {
                         isActive={isActive}
                         className="min-h-[280px] sm:min-h-[320px] md:min-h-[360px]"
                       />
-                      {/**
-                       * <div
-                       *   className={`mt-10 md:mt-14 transition-all duration-500 min-h-[70px] md:min-h-[80px] ${
-                       *     isActive && !isTransitioning ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
-                       *   }`}
-                       * >
-                       *   <div className="text-[17px] md:text-[19px] font-medium text-white/95">{item.name}</div>
-                       *   <div className="text-white/60 text-[13px] md:text-[14px] mt-1">{item.role}</div>
-                       * </div>
-                       */}
+                      <div
+                        className={`mt-10 md:mt-14 pl-6 transition-all duration-500 min-h-[70px] md:min-h-[80px] ${
+                          isActive && !isTransitioning ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
+                        }`}
+                      >
+                        {/**
+                          <div className="text-[17px] md:text-[19px] font-medium text-white/95">{item.name}</div>
+                        */}
+                        <div className="text-[20px] md:text-[24px] font-medium text-[#f6ae2d]">{item.role}</div>
+                      </div>
                     </div>
                   );
                 })}
