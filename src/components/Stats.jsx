@@ -53,7 +53,10 @@ const StatsSection = () => {
     >
       <div className="max-w-[1500px] mx-auto text-center">
         <AnimatedHeadline progress={progress} />
-        <div className="mt-12 md:mt-16 flex flex-wrap justify-center gap-x-10 gap-y-12 md:gap-x-14 md:gap-y-14 overflow-x-auto pb-2">
+        <h2 className="text-[24px] md:text-[28px] font-medium tracking-[-0.02em] text-center mt-16 mb-8">
+          Impact at a Glance
+        </h2>
+        <div className="flex flex-wrap justify-center gap-x-10 gap-y-12 md:gap-x-14 md:gap-y-14 overflow-x-auto pb-2">
           {stats.map((s) => (
             <StatItem key={s.label} value={s.value} label={s.label} />
           ))}
