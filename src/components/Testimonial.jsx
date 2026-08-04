@@ -151,36 +151,40 @@ const Testimonial = () => {
                         isActive={isActive}
                         className="min-h-[280px] sm:min-h-[320px] md:min-h-[360px]"
                       />
-                      <div
-                        className={`mt-10 md:mt-14 transition-all duration-500 min-h-[70px] md:min-h-[80px] ${
-                          isActive && !isTransitioning ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
-                        }`}
-                      >
-                        <div className="text-[17px] md:text-[19px] font-medium text-white/95">{item.name}</div>
-                        <div className="text-white/60 text-[13px] md:text-[14px] mt-1">{item.role}</div>
-                      </div>
+                      {/**
+                       * <div
+                       *   className={`mt-10 md:mt-14 transition-all duration-500 min-h-[70px] md:min-h-[80px] ${
+                       *     isActive && !isTransitioning ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
+                       *   }`}
+                       * >
+                       *   <div className="text-[17px] md:text-[19px] font-medium text-white/95">{item.name}</div>
+                       *   <div className="text-white/60 text-[13px] md:text-[14px] mt-1">{item.role}</div>
+                       * </div>
+                       */}
                     </div>
                   );
                 })}
               </div>
             </div>
 
-            <div className="mt-12 flex flex-wrap gap-3">
-              {testimonials.map((item, index) => (
-                <button
-                  key={item.name}
-                  type="button"
-                  onClick={() => scrollTo(index)}
-                  className={`px-4 py-2 text-sm uppercase tracking-[0.2em] border transition-colors duration-300 ${
-                    index === activeIndex
-                      ? 'border-[#f6ae2d] text-[#f6ae2d] bg-[#f6ae2d]/10'
-                      : 'border-white/20 text-white/60 hover:text-white hover:border-white/60'
-                  }`}
-                >
-                  {item.name.split(' ')[0]}
-                </button>
-              ))}
-            </div>
+            {/**
+             * <div className="mt-12 flex flex-wrap gap-3">
+             *   {testimonials.map((item, index) => (
+             *     <button
+             *       key={item.name}
+             *       type="button"
+             *       onClick={() => scrollTo(index)}
+             *       className={`px-4 py-2 text-sm uppercase tracking-[0.2em] border transition-colors duration-300 ${
+             *         index === activeIndex
+             *           ? 'border-[#f6ae2d] text-[#f6ae2d] bg-[#f6ae2d]/10'
+             *           : 'border-white/20 text-white/60 hover:text-white hover:border-white/60'
+             *       }`}
+             *     >
+             *       {item.name.split(' ')[0]}
+             *     </button>
+             *   ))}
+             * </div>
+             */}
           </div>
         </div>
       </div>
