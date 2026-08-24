@@ -4,6 +4,11 @@ import Reveal from '../components/Reveal';
 
 const servicesData = [
   {
+    title: "Conference & Event Coverage",
+    description: "Professional photo and video coverage for global events, seminars, workshops, cocktail receptions, and launch events. We capture key moments with precision and professionalism—supporting visibility, strengthening reporting, and enhancing brand positioning across multiple media platforms.",
+    image: "/images/isaac/bigz-40.webp",
+  },
+  {
     title: "Documentary  Film & Photography",
     description: "We produce documentary-style success stories rooted in real experiences—capturing voices, outcomes, and transformation through compelling film and authentic, high-quality imagery that brings your programmes to life across reports, campaigns, and digital platforms.",
     image: "/images/isaac/documentary-and-film.webp",
@@ -13,25 +18,20 @@ const servicesData = [
     description: "Flexible content solutions designed to meet your needs—including raw footage for future use, staff portraits, and customized deliverables aligned with your budget, brand, and communication goals. Livestream services are also available where required.",
     image: "/images/documentaries/community-webp/NEXTGEN-132.webp",
   },
-  {
-    title: "Conference & Event Coverage",
-    description: "Professional photo and video coverage for global events, seminars, workshops, cocktail receptions, and launch events. We capture key moments with precision and professionalism—supporting visibility, strengthening reporting, and enhancing brand positioning across multiple media platforms.",
-    image: "/images/coorporates-webp/Global learning workshop (154).webp",
-  },
 ];
 
 const ServicesHero = () => (
   <section className="bg-white text-black pt-40 md:pt-52 pb-16 md:pb-24 px-6 md:px-12">
-    <div className="max-w-[1500px] mx-auto">
+    <div className="max-w-[1500px] mx-auto text-center">
       <p className="text-neutral-500 text-xs sm:text-sm tracking-[0.3em] uppercase mb-6">What We Do</p>
-      <h2 className="text-[32px] sm:text-[42px] md:text-[50px] font-medium tracking-[-0.02em] leading-[1.1] max-w-[28ch]">
+      <h2 className="text-[32px] sm:text-[42px] md:text-[50px] font-medium tracking-[-0.02em] leading-[1.1] max-w-[28ch] mx-auto">
         Visual storytelling{' '}
         <span className="relative inline-block italic align-baseline">
           <span className="relative z-10">solutions</span>
           <span className="absolute inset-x-[-4px] bottom-1 h-2 bg-[#f6ae2d]/50" aria-hidden="true" />
         </span>
       </h2>
-      <p className="mt-10 md:mt-14 text-black text-[16px] md:text-[18px] max-w-[58ch] leading-relaxed">
+      <p className="mt-10 md:mt-14 text-black text-[18px] md:text-[20px] max-w-[58ch] leading-relaxed mx-auto">
         We deliver high-quality visual storytelling solutions that translate your work into compelling, evidence-driven narratives for donors, partners, and stakeholders.
       </p>
     </div>
@@ -54,7 +54,7 @@ const ServiceItem = ({ service, index, delay }) => (
         <h3 className="text-[28px] md:text-[36px] font-medium tracking-[-0.01em] mb-6">
           {service.title}
         </h3>
-        <p className="text-black text-[16px] md:text-[18px] leading-[1.6] max-w-[48ch]">
+        <p className="text-black text-[18px] md:text-[20px] leading-[1.6] max-w-[48ch]">
           {service.description}
         </p>
       </div>
