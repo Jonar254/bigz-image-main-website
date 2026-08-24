@@ -16,7 +16,7 @@ const DocumentariesHero = () => {
     <section ref={heroRef} className="relative min-h-screen md:min-h-[calc(100vh-1.5rem)] w-full bg-black overflow-hidden flex flex-col">
       <div className="absolute inset-0 overflow-hidden">
         <Image
-          src="/images/documentaries/community-webp/9B3A0434.webp"
+          src="/images/isaac/documentary-cover.webp"
           alt="Documentary storytelling"
           fill
           sizes="100vw"
@@ -37,9 +37,9 @@ const DocumentariesHero = () => {
         <h1 className="text-white font-medium tracking-[-0.02em] leading-[1.05] max-w-[24ch] text-[32px] sm:text-[42px] md:text-[50px]">
           Documentaries
         </h1>
-        <p className="mt-8 text-white/90 text-[16px] md:text-[18px] max-w-[58ch] leading-relaxed">
+        {/* <p className="mt-8 text-white/90 text-[16px] md:text-[18px] max-w-[58ch] leading-relaxed">
           BigzImage creates evidence-based visual stories that demonstrate program impact, amplify visibility, and translate complex outcomes into compelling narratives for donors and stakeholders.
-        </p>
+        </p> */}
       </div>
     </section>
   </div>
