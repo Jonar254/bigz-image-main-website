@@ -18,7 +18,7 @@ const AboutHero = () => {
       <div className="max-w-[1500px] mx-auto">
         <div className="max-w-4xl mx-auto text-center">
           <p
-            className={`text-neutral-500 text-xs sm:text-sm tracking-[0.3em] uppercase mb-6 transition-all duration-700 ${
+            className={`text-neutral-500 text-sm sm:text-base tracking-[0.3em] uppercase mb-6 transition-all duration-700 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
@@ -36,7 +36,7 @@ const AboutHero = () => {
             </span>
           </h2>
           <p
-            className={`mt-10 md:mt-14 text-black text-[16px] md:text-[18px] leading-relaxed transition-all duration-700 delay-300 ${
+            className={`mt-10 md:mt-14 text-black text-[18px] md:text-[20px] leading-relaxed transition-all duration-700 delay-300 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
@@ -90,7 +90,7 @@ const MVVItem = ({ item, delay }) => (
       <h4 className="text-[28px] md:text-[36px] font-medium tracking-[-0.01em] mb-6">
         {item.label}
       </h4>
-      <p className="text-white/80 text-[16px] md:text-[18px] leading-[1.6] max-w-[48ch]">
+      <p className="text-white/80 text-[18px] md:text-[20px] leading-[1.6] max-w-[48ch]">
         {item.text}
       </p>
     </div>
