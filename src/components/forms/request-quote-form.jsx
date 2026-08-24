@@ -34,19 +34,13 @@ const steps = [
 
 const photographyServices = [
   "Corporate Events Photography",
-  "Wedding and Engagement Photography",
-  "Studio Shots & Studio Hire Photography",
   "Portrait Shots Photography",
   "Outdoor & Indoor Photography",
-  "Family Photography - Baby, Birthdays, Parties",
-  "Wildlife, Tours & Travel Photography",
-  "Food & Hotel Photography",
   "Drone & Aerial Photography",
 ];
 
 const videographyServices = [
   "Corporate Events Video Coverage",
-  "Wedding Video Coverage",
   "Documentaries Production",
   "Livestreaming & Live shows Coverage",
   "Drone & Aerial Videography",
