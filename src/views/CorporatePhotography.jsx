@@ -115,9 +115,9 @@ const CorporatePhotographyHeader = () => {
         <h1 className="text-white font-medium tracking-[-0.02em] leading-[1.05] max-w-[24ch] text-[32px] sm:text-[42px] md:text-[50px]">
           Corporate Photography
         </h1>
-        <p className="mt-8 text-white/90 text-[16px] md:text-[18px] max-w-[58ch] leading-relaxed">
+        {/* <p className="mt-8 text-white/90 text-[16px] md:text-[18px] max-w-[58ch] leading-relaxed">
           Make your event look as professional as it feels. We capture corporate moments—clean, discreet, and brand-ready. Conferences. Seminars. Launches. Executive events.
-        </p>
+        </p> */}
       </div>
     </section>
   </div>
@@ -252,10 +252,10 @@ const PortfolioSection = () => {
           <Camera size={20} className="text-[#f6ae2d]" />
           <span className="text-black text-[12px] uppercase tracking-[0.18em]">Photography Portfolio</span>
         </div>
-        <h2 className="text-black text-[40px] md:text-[56px] font-medium tracking-[-0.02em] leading-tight mb-6">
+        <h2 className="text-black text-[32px] md:text-[42px] font-medium tracking-[-0.02em] leading-tight mb-6">
           Corporate photography projects
         </h2>
-        <p className="text-black/70 text-[16px] md:text-[18px] max-w-[70ch] leading-relaxed">
+        <p className="text-black/70 text-[18px] md:text-[20px] max-w-[70ch] leading-relaxed">
           Professional photography for conferences, launches, partnerships, and institutional milestones. Polished media assets for PR, donor reporting, and stakeholder communication.
         </p>
       </div>

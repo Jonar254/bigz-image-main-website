@@ -58,7 +58,7 @@ const CorporateVideographyHeader = () => {
     <section ref={heroRef} className="relative min-h-screen md:min-h-[calc(100vh-1.5rem)] w-full bg-black overflow-hidden flex flex-col">
       <div className="absolute inset-0 overflow-hidden">
         <Image
-          src="/images/coorporates-webp/Global learning workshop (154).webp"
+          src="/images/isaac/bigz-corporate.webp"
           alt="Corporate videography showcase"
           fill
           sizes="100vw"

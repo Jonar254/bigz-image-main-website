@@ -686,9 +686,7 @@ export const documentaryPhotographyProjects = allProjects.filter(
   (p) => docPhotoSlugs.includes(p.slug),
 );
 
-export const documentaryVideographyProjects = videographyProjects.filter(
-  (p) => p.slug !== "uber-launch-covered-by-bigz-image",
-);
+export const documentaryVideographyProjects = videographyProjects;
 
 // Corporate sub-page splits
 const corpPhotoSlugs = [
@@ -703,7 +701,7 @@ export const corporatePhotographyProjects = allProjects.filter((p) =>
 );
 
 export const corporateVideographyProjects = allProjects.filter((p) =>
-  ["uber-launch-covered-by-bigz-image", "action-against-hunger-workshop"].includes(p.slug),
+  ["action-against-hunger-workshop"].includes(p.slug),
 );
 
 const documentaryPhotographySlugSet = new Set(documentaryPhotographyProjects.map((p) => p.slug));

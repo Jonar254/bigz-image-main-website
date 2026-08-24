@@ -6,7 +6,7 @@ const servicesData = [
   {
     title: "Conference & Event Coverage",
     description: "Professional photo and video coverage for global events, seminars, workshops, cocktail receptions, and launch events. We capture key moments with precision and professionalism—supporting visibility, strengthening reporting, and enhancing brand positioning across multiple media platforms.",
-    image: "/images/isaac/bigz-40.webp",
+    image: "/images/isaac/bigz-17.webp",
   },
   {
     title: "Documentary  Film & Photography",
