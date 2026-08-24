@@ -4,14 +4,9 @@ import Reveal from '../components/Reveal';
 
 const servicesData = [
   {
-    title: "Documentary Film",
-    description: "We produce documentary-style success stories rooted in real experiences—capturing voices, outcomes, and transformation in ways that resonate with donors and key stakeholders.",
-    image: "/images/documentaries/community-webp/9B3A0434.webp",
-  },
-  {
-    title: "Documentary Photography",
-    description: "Authentic, high-quality imagery that brings your programmes to life across reports, campaigns, and digital platforms.",
-    image: "/images/documentaries/community-webp/BeatriceMumbi(27).webp",
+    title: "Documentary  Film & Photography",
+    description: "We produce documentary-style success stories rooted in real experiences—capturing voices, outcomes, and transformation through compelling film and authentic, high-quality imagery that brings your programmes to life across reports, campaigns, and digital platforms.",
+    image: "/images/isaac/documentary-and-film.webp",
   },
   {
     title: "Tailored Visual Content Packages",
