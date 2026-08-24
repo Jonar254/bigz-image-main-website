@@ -49,14 +49,14 @@ const DocumentariesHero = () => {
 const IntroSection = () => (
   <section className="bg-white text-black py-20 md:py-28 px-6 md:px-12">
     <div className="max-w-[1500px] mx-auto text-center">
-      <h2 className="text-[32px] sm:text-[42px] md:text-[50px] font-medium tracking-[-0.02em] leading-[1.1] mb-8">
+      <h2 className="text-[28px] sm:text-[36px] md:text-[42px] font-medium tracking-[-0.02em] leading-[1.1] mb-8">
         Documentary storytelling{' '}
         <span className="relative inline-block italic">
           <span className="relative z-10">that drives change</span>
           <span className="absolute inset-x-[-4px] bottom-1 h-2 bg-[#f6ae2d]/50" aria-hidden="true" />
         </span>
       </h2>
-      <p className="text-[16px] md:text-[18px] leading-[1.6] text-black max-w-[62ch] mx-auto">
+      <p className="text-[18px] md:text-[20px] leading-[1.6] text-black max-w-[62ch] mx-auto">
         We produce evidence-based visual stories that demonstrate program impact, amplify visibility, and translate complex outcomes into compelling narratives for donors and stakeholders.
       </p>
     </div>
