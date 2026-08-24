@@ -16,7 +16,7 @@ const CorporateHero = () => {
     <section ref={heroRef} className="relative min-h-screen md:min-h-[calc(100vh-1.5rem)] w-full bg-black overflow-hidden flex flex-col">
       <div className="absolute inset-0 overflow-hidden">
         <Image
-          src="/images/corporate/AGECS CONFERENCE-webp/Global learning 2024 day five-72.webp"
+          src="/images/isaac/corporate-photography-cover.webp"
           alt="Corporate event coverage"
           fill
           sizes="100vw"
@@ -72,8 +72,8 @@ const CARD_PRESENTATION = {
     scriptText: 'storytelling',
   },
   'Corporate Videography': {
-    topLabel: 'Corporate Portfolio',
-    title: 'Corporate Videography',
+    topLabel: 'Corporate',
+    title: 'Videography',
     subtitle: 'strategic films &',
     scriptText: 'impact',
   },
@@ -118,7 +118,7 @@ const ServiceCard = ({ title, description, image, href, delay }) => {
 
           <div className="space-y-3">
             <p className="text-[11px] tracking-[0.35em] uppercase text-white">{presentation.topLabel}</p>
-            <h3 className="text-[30px] sm:text-[36px] font-light tracking-[0.32em] uppercase">
+            <h3 className="text-[28px] sm:text-[34px] font-light tracking-[0.28em] uppercase">
               {presentation.title}
             </h3>
             {highlightLines.map((line, index) => (
