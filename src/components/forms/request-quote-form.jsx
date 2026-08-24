@@ -620,7 +620,7 @@ export default function RequestQuoteForm() {
                           {photographyServices.map((service, index) => (
                             <motion.div
                               key={service}
-                              className="flex items-center space-x-3 rounded-xl border border-gray-200 p-3 cursor-pointer hover:bg-gray-50 transition-colors"
+                              className="flex items-center space-x-3 rounded-xl border border-gray-200 p-3 hover:bg-gray-50 transition-colors"
                               whileHover={{ scale: 1.01 }}
                               whileTap={{ scale: 0.99 }}
                               initial={{ opacity: 0, y: 10 }}
@@ -632,9 +632,6 @@ export default function RequestQuoteForm() {
                                   duration: 0.3,
                                 },
                               }}
-                              onClick={() =>
-                                toggleService("photographyServices", service)
-                              }
                             >
                               <Checkbox
                                 id={`photo-${service}`}
@@ -666,7 +663,7 @@ export default function RequestQuoteForm() {
                           {videographyServices.map((service, index) => (
                             <motion.div
                               key={service}
-                              className="flex items-center space-x-3 rounded-xl border border-gray-200 p-3 cursor-pointer hover:bg-gray-50 transition-colors"
+                              className="flex items-center space-x-3 rounded-xl border border-gray-200 p-3 hover:bg-gray-50 transition-colors"
                               whileHover={{ scale: 1.01 }}
                               whileTap={{ scale: 0.99 }}
                               initial={{ opacity: 0, y: 10 }}
@@ -678,9 +675,6 @@ export default function RequestQuoteForm() {
                                   duration: 0.3,
                                 },
                               }}
-                              onClick={() =>
-                                toggleService("videographyServices", service)
-                              }
                             >
                               <Checkbox
                                 id={`video-${service}`}
