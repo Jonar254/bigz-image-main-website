@@ -54,7 +54,7 @@ const HeroImage = () => (
       <Reveal>
         <div className="w-full aspect-[16/8] overflow-hidden">
           <img
-            src="/images/documentaries/community-webp/_DSC0117.webp"
+            src="/images/isaac/about-bigz.webp"
             alt="BigzImage team at work"
             className="w-full h-full object-cover"
           />
@@ -120,7 +120,7 @@ const mvvData = [
           <Reveal>
             <div className="sticky top-28 w-full aspect-[3/4] overflow-hidden md:max-w-[520px]">
               <img
-                src="/images/isaac/KingKiddPH-82.webp"
+                src="/images/isaac/KingKiddPH-210.webp"
                 alt="BigzImage mission"
                 className="w-full h-full object-cover"
               />
