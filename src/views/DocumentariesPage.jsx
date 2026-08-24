@@ -117,7 +117,7 @@ const ServiceCard = ({ title, description, image, href, delay }) => {
 
           <div className="space-y-3">
             <p className="text-[11px] tracking-[0.35em] uppercase text-white">{presentation.topLabel}</p>
-            <h3 className="text-[30px] sm:text-[36px] font-light tracking-[0.32em] uppercase">
+            <h3 className="text-[28px] sm:text-[34px] font-light tracking-[0.28em] uppercase">
               {presentation.title}
             </h3>
             {highlightLines.map((line, index) => (
@@ -154,7 +154,7 @@ const ServicesGrid = () => {
     {
       title: "Documentary Videography",
       description: "We produce documentary-style success stories rooted in real experiences—capturing voices, outcomes, and transformation in ways that resonate with donors and key stakeholders.",
-      image: "/images/documentaries/community-webp/_DSC0695.webp",
+      image: "/images/isaac/documentary-videography-cover.webp",
       href: "/documentaries/videography",
     },
   ];

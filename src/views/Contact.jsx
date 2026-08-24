@@ -13,7 +13,7 @@ const CONTACT_HERO =
   '/images/documentaries/youth-empowerment-webp/UKD  (10).webp';
 
 const SERVICE_TYPES = [
-  'Branding',
+ 
   'Consultation',
   'Corporate Event',
   'Documentary',

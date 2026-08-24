@@ -88,7 +88,7 @@ const DocumentaryPhotographyHeader = () => {
     <section ref={heroRef} className="relative min-h-screen md:min-h-[calc(100vh-1.5rem)] w-full bg-black overflow-hidden flex flex-col">
       <div className="absolute inset-0 overflow-hidden">
         <Image
-          src="/images/documentaries/community-webp/9B3A0434.webp"
+          src="/images/documentaries/community-webp/BeatriceMumbi(27).webp"
           alt="Documentary photography"
           fill
           sizes="100vw"
