@@ -2,7 +2,6 @@ import "./globals.css";
 
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
-import { Providers } from "@/components/Providers";
 import StructuredData from "@/components/StructuredData";
 import { organizationSchema, localBusinessSchema, websiteSchema } from "@/lib/structured-data";
 
@@ -68,11 +67,9 @@ export default function RootLayout({ children }) {
         <StructuredData data={websiteSchema} />
       </head>
       <body className="bg-black text-white antialiased">
-        <Providers>
-          <Navigation />
-          <main className="md:pt-[110px] min-h-screen">{children}</main>
-          <Footer />
-        </Providers>
+        <Navigation />
+        <main className="md:pt-[110px] min-h-screen">{children}</main>
+        <Footer />
       </body>
     </html>
   );
