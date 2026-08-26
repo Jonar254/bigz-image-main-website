@@ -49,17 +49,16 @@ const StyledServiceCard = ({ service, index, presentation }) => (
         <span className="sr-only">{service.label}</span>
 
         <div className="space-y-3">
-          <p className="text-[11px] tracking-[0.35em] uppercase text-white">Our Services</p>
-          <h3 className="text-[30px] sm:text-[36px] font-light tracking-[0.32em] uppercase">
+          <h3 className="text-[22px] sm:text-[26px] md:text-[28px] font-light tracking-[0.15em] uppercase">
             {presentation.title}
           </h3>
           {presentation.subtitle && (
-            <p className="text-[15px] uppercase tracking-[0.32em] text-white">
+            <p className="text-[14px] uppercase tracking-[0.2em] text-white">
               {presentation.subtitle}
             </p>
           )}
           {presentation.scriptText && (
-            <p className="text-[15px] uppercase tracking-[0.32em] text-white">
+            <p className="text-[14px] uppercase tracking-[0.2em] text-white">
               {presentation.scriptText}
             </p>
           )}
@@ -99,7 +98,7 @@ const DefaultServiceCard = ({ service }) => (
           Service
         </div>
         <div className="absolute bottom-4 left-4 right-4">
-          <h3 className="text-[30px] sm:text-[36px] font-light tracking-[0.32em] uppercase text-white">
+          <h3 className="text-[22px] sm:text-[26px] md:text-[28px] font-light tracking-[0.15em] uppercase text-white">
             {service.label}
           </h3>
         </div>

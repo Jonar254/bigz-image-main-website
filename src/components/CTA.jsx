@@ -66,7 +66,7 @@ const CTA = () => {
                 <span className="absolute inset-x-[-4px] bottom-1 h-2 bg-[#f6ae2d]/50" aria-hidden="true" />
               </span>
             </h2>
-            <p className="mt-6 max-w-xl text-black/65 text-base leading-relaxed">
+            <p className="mt-6 max-w-xl text-black/65 text-[18px] md:text-[20px] leading-relaxed">
               Let&apos;s turn your impact into narratives that move people to act. Flexible, affordable packages tailored to your communication goals.
             </p>
             <Link

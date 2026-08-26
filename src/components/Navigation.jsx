@@ -97,10 +97,16 @@ const MobileMenu = ({ textColor, onClose }) => (
 );
 
 const useScrolled = (offset = 30) => {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.scrollY > offset;
+    }
+    return false;
+  });
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > offset);
-    window.addEventListener('scroll', onScroll);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, [offset]);
   return scrolled;

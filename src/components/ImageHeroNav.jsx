@@ -7,13 +7,18 @@ import { Menu, X } from 'lucide-react';
 import { navLinks } from '../data/mock';
 
 const useScrolled = (offset = 30) => {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.scrollY > offset;
+    }
+    return false;
+  });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > offset);
 
     onScroll();
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, [offset]);
 
@@ -21,11 +26,11 @@ const useScrolled = (offset = 30) => {
 };
 
 const useBeyondHero = (heroRef) => {
-  const [pastHero, setPastHero] = useState(() => !heroRef?.current);
+  const [pastHero, setPastHero] = useState(false);
 
   useEffect(() => {
     if (!heroRef?.current) {
-      setPastHero(true);
+      setPastHero(false);
       return undefined;
     }
 
@@ -36,7 +41,7 @@ const useBeyondHero = (heroRef) => {
     };
 
     onScroll();
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, [heroRef]);
 
@@ -72,10 +77,6 @@ const ImageHeroNav = ({ heroRef, offset = 80, className = '' }) => {
     }
   }, [mobileOpen]);
 
-  const translateClass = scrolled
-    ? 'translate-y-0'
-    : 'md:translate-y-[2.75rem]';
-
   const surfaceClass = pastHero
     ? 'bg-black/95 backdrop-blur-md border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.4)]'
     : 'bg-transparent border-transparent backdrop-blur-0';
@@ -83,7 +84,7 @@ const ImageHeroNav = ({ heroRef, offset = 80, className = '' }) => {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-500 ease-out ${translateClass} ${surfaceClass} will-change-transform ${className}`}
+        className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-500 ease-out ${surfaceClass} ${className}`}
       >
         <div className="max-w-[1500px] mx-auto px-6 md:px-12">
           <div className="flex items-center justify-between py-6">

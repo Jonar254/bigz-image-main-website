@@ -187,7 +187,7 @@ const ModernFaq = () => {
             </h2>
 
             <p
-              className={`text-base md:text-lg text-black max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${
+              className={`text-[18px] md:text-[20px] text-black max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
