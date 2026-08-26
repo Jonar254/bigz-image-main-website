@@ -21,6 +21,28 @@ export async function generateMetadata({ params }) {
   return {
     title: `${project.title} | Documentary Videography | BigzImage`,
     description: project.description,
+    keywords: [
+      'documentary videography',
+      project.title,
+      'NGO video production Kenya',
+      'impact video stories',
+    ],
+    alternates: {
+      canonical: `/documentaries/videography/${slug}`,
+    },
+    openGraph: {
+      title: `${project.title} | Documentary Videography | BigzImage`,
+      description: project.description,
+      url: `/documentaries/videography/${slug}`,
+      type: 'website',
+      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: project.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${project.title} | Documentary Videography`,
+      description: project.description,
+      images: ['/og-image.jpg'],
+    },
   };
 }
 

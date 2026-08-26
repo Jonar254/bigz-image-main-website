@@ -36,7 +36,7 @@ const RequestQuoteHero = () => {
 
         <div className="relative z-10 flex-1 flex flex-col justify-center items-center text-center px-6 md:px-12 pt-32 md:pt-40 pb-20">
           <p className="text-[11px] tracking-[0.32em] uppercase text-white/70 mb-8">Request a Quote</p>
-          <h1 className="text-white font-medium tracking-[-0.02em] leading-[1.05] max-w-[26ch] text-[32px] sm:text-[42px] md:text-[52px] lg:text-[60px]">
+          <h1 className="text-white font-medium tracking-[-0.02em] leading-[1.05] max-w-[26ch] text-[32px] sm:text-[42px] md:text-[50px]">
             Tell us what you need. We&apos;ll tailor the quote.
           </h1>
         </div>
@@ -49,10 +49,10 @@ const RequestQuoteIntro = () => (
   <section className="bg-white text-black py-20 md:py-28 px-6 md:px-12">
     <div className="max-w-[1400px] mx-auto text-center">
       <p className="text-[11px] tracking-[0.32em] uppercase text-[#b08a5b] mb-6">Request a Quote</p>
-      <h2 className="text-[32px] sm:text-[42px] md:text-[50px] font-medium tracking-[-0.02em] leading-[1.1] mb-8">
+      <h2 className="text-[28px] sm:text-[36px] md:text-[42px] font-medium tracking-[-0.02em] leading-[1.1] mb-8">
         Tell us about your programme, campaign, or event, and we&apos;ll shape the scope together.
       </h2>
-      <p className="text-[16px] md:text-[18px] leading-[1.6] text-black max-w-[70ch] mx-auto">
+      <p className="text-[18px] md:text-[20px] leading-[1.6] text-black max-w-[70ch] mx-auto">
         The more context you provide, the better we can align your visual strategy with outcomes, stakeholders, and delivery timelines. Our team reviews every submission manually to ensure you receive a thoughtful plan.
       </p>
     </div>
@@ -65,10 +65,10 @@ const RequestQuoteFormSection = () => (
       <div className="px-6 md:px-12 lg:px-16 py-12 md:py-16">
         <div className="text-left md:text-center mb-12">
           <p className="text-[11px] tracking-[0.32em] uppercase text-[#b08a5b] mb-6">Project Brief</p>
-          <h3 className="text-[30px] sm:text-[36px] md:text-[42px] font-medium tracking-[-0.02em] leading-[1.15] text-black mb-5">
+          <h3 className="text-[26px] sm:text-[32px] md:text-[36px] font-medium tracking-[-0.02em] leading-[1.15] text-black mb-5">
             Share the essentials so we can design the right production plan.
           </h3>
-          <p className="text-[15px] md:text-[17px] leading-relaxed text-black/80 max-w-[68ch] mx-auto">
+          <p className="text-[18px] md:text-[20px] leading-relaxed text-black/80 max-w-[68ch] mx-auto">
             Whether you need corporate coverage, documentary storytelling, or full-service production, this form guides you through the details our producers need to prepare an accurate quote.
           </p>
         </div>
@@ -81,7 +81,7 @@ const RequestQuoteFormSection = () => (
 const RequestQuote = () => (
   <div className="bg-white text-black">
     <RequestQuoteHero />
-    <RequestQuoteIntro />
+    {/* <RequestQuoteIntro /> */}
     <RequestQuoteFormSection />
     <Testimonial />
     <CTA />

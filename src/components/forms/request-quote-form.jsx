@@ -907,7 +907,7 @@ export default function RequestQuoteForm() {
                   }
                   disabled={!isStepValid() || isSubmitting}
                   className={cn(
-                    "flex items-center gap-1 rounded-full border border-[#111111] bg-[#111111] text-white shadow-md shadow-black/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                    "flex items-center gap-1 border border-[#111111] bg-[#111111] text-white shadow-md shadow-black/20 disabled:opacity-50 disabled:cursor-not-allowed"
                   )}
                 >
                   {isSubmitting ? (

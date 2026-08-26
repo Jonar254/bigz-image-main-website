@@ -21,6 +21,28 @@ export async function generateMetadata({ params }) {
   return {
     title: `${project.title} | Documentary Photography | BigzImage`,
     description: project.description,
+    keywords: [
+      'documentary photography',
+      project.title,
+      'NGO photography Kenya',
+      'impact photography',
+    ],
+    alternates: {
+      canonical: `/documentaries/photography/${slug}`,
+    },
+    openGraph: {
+      title: `${project.title} | Documentary Photography | BigzImage`,
+      description: project.description,
+      url: `/documentaries/photography/${slug}`,
+      type: 'website',
+      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: project.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${project.title} | Documentary Photography`,
+      description: project.description,
+      images: ['/og-image.jpg'],
+    },
   };
 }
 

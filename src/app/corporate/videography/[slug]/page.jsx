@@ -21,6 +21,28 @@ export async function generateMetadata({ params }) {
   return {
     title: `${project.title} | Corporate Videography | BigzImage`,
     description: project.description,
+    keywords: [
+      'corporate videography',
+      project.title,
+      'event video coverage Kenya',
+      'professional videography',
+    ],
+    alternates: {
+      canonical: `/corporate/videography/${slug}`,
+    },
+    openGraph: {
+      title: `${project.title} | Corporate Videography | BigzImage`,
+      description: project.description,
+      url: `/corporate/videography/${slug}`,
+      type: 'website',
+      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: project.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${project.title} | Corporate Videography`,
+      description: project.description,
+      images: ['/og-image.jpg'],
+    },
   };
 }
 
