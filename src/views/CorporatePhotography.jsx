@@ -50,7 +50,7 @@ const ProjectCard = ({ project, onHover, onLeave, index }) => {
 
           <div className="space-y-3">
             <p className="text-[11px] tracking-[0.35em] uppercase text-white">{metaTop}</p>
-            <h3 className="text-[30px] sm:text-[36px] font-light tracking-[0.32em] uppercase">
+<h3 className="text-[22px] sm:text-[26px] md:text-[28px] font-light tracking-[0.15em] uppercase">
               {project.title}
             </h3>
             {metaLines.map((line, index) => (
@@ -166,7 +166,7 @@ const LastProjectCard = ({ project, onHover, onLeave, index }) => {
 
             <div className="space-y-3">
               <p className="text-[11px] tracking-[0.35em] uppercase text-white">{metaTop}</p>
-              <h3 className="text-[30px] sm:text-[36px] font-light tracking-[0.32em] uppercase">
+  <h3 className="text-[22px] sm:text-[26px] md:text-[28px] font-light tracking-[0.15em] uppercase">
                 {project.title}
               </h3>
               {metaLines.map((line, index) => (

@@ -123,9 +123,9 @@ const DocumentaryPhotographyDetail = ({ project }) => {
             <h1 className="text-white font-medium tracking-[-0.02em] leading-[1.05] max-w-[24ch] text-[32px] sm:text-[42px] md:text-[50px] mb-8">
               {project.title}
             </h1>
-            <p className="text-white/90 text-[16px] md:text-[18px] max-w-[58ch] leading-relaxed">
+            {/* <p className="text-white/90 text-[16px] md:text-[18px] max-w-[58ch] leading-relaxed">
               {project.description}
-            </p>
+            </p> */}
           </div>
         </section>
       </div>

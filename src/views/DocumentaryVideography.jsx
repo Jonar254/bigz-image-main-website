@@ -80,9 +80,9 @@ const DocumentaryVideographyHeader = () => {
         <h1 className="text-white font-medium tracking-[-0.02em] leading-[1.05] max-w-[24ch] text-[32px] sm:text-[42px] md:text-[50px]">
           Documentary Videography
         </h1>
-        <p className="mt-8 text-white/90 text-[16px] md:text-[18px] max-w-[58ch] leading-relaxed">
+        {/* <p className="mt-8 text-white/90 text-[16px] md:text-[18px] max-w-[58ch] leading-relaxed">
           We produce documentary-style success stories rooted in real experiences—capturing voices, outcomes, and transformation in ways that resonate with donors and key stakeholders.
-        </p>
+        </p> */}
       </div>
     </section>
   </div>
@@ -104,10 +104,10 @@ const PortfolioSection = () => {
           <Video size={20} className="text-[#f6ae2d]" />
           <span className="text-black text-[12px] uppercase tracking-[0.18em]">Impact Storytelling & Documentary Production</span>
         </div>
-        <h2 className="text-black text-[40px] md:text-[56px] font-medium tracking-[-0.02em] leading-tight mb-6">
+        <h2 className="text-black text-[32px] md:text-[42px] font-medium tracking-[-0.02em] leading-tight mb-6">
           Documentary storytelling that drives change
         </h2>
-        <p className="text-black/70 text-[16px] md:text-[18px] max-w-[70ch] leading-relaxed">
+        <p className="text-black/70 text-[18px] md:text-[20px] max-w-[70ch] leading-relaxed">
           We produce evidence-based visual stories that demonstrate program impact, amplify visibility, and translate complex outcomes into compelling narratives for donors and stakeholders.
         </p>
       </div>

@@ -45,7 +45,7 @@ const ProjectCard = ({ project, onHover, onLeave }) => {
 
           <div className="space-y-3">
             <p className="text-[11px] tracking-[0.35em] uppercase text-white">{metaTop}</p>
-            <h3 className="text-[30px] sm:text-[36px] font-light tracking-[0.32em] uppercase">
+            <h3 className="text-[22px] sm:text-[26px] md:text-[28px] font-light tracking-[0.15em] uppercase">
               {project.title}
             </h3>
             {metaLines.map((line, index) => (
@@ -110,9 +110,9 @@ const DocumentaryPhotographyHeader = () => {
         <h1 className="text-white font-medium tracking-[-0.02em] leading-[1.05] max-w-[24ch] text-[32px] sm:text-[42px] md:text-[50px]">
           Documentary Photography
         </h1>
-        <p className="mt-8 text-white/90 text-[16px] md:text-[18px] max-w-[58ch] leading-relaxed">
+        {/* <p className="mt-8 text-white/90 text-[16px] md:text-[18px] max-w-[58ch] leading-relaxed">
           Authentic, high-quality imagery that brings your programmes to life for reports, campaigns, and digital platforms. We capture real moments with dignity and respect.
-        </p>
+        </p> */}
       </div>
     </section>
   </div>

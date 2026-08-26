@@ -72,8 +72,8 @@ const CARD_PRESENTATION = {
     scriptText: 'storytelling',
   },
   'Corporate Videography': {
-    topLabel: 'Corporate',
-    title: 'Videography',
+    topLabel: 'Corporate Portfolio',
+    title: 'Corporate Videography',
     subtitle: 'strategic films &',
     scriptText: 'impact',
   },
@@ -117,12 +117,11 @@ const ServiceCard = ({ title, description, image, href, delay }) => {
           <span className="sr-only">{title}</span>
 
           <div className="space-y-3">
-            <p className="text-[11px] tracking-[0.35em] uppercase text-white">{presentation.topLabel}</p>
-            <h3 className="text-[28px] sm:text-[34px] font-light tracking-[0.28em] uppercase">
+            <h3 className="text-[22px] sm:text-[26px] md:text-[28px] font-light tracking-[0.15em] uppercase">
               {presentation.title}
             </h3>
             {highlightLines.map((line, index) => (
-              <p key={`${title}-${index}`} className="text-[15px] uppercase tracking-[0.32em] text-white">
+              <p key={`${title}-${index}`} className="text-[14px] uppercase tracking-[0.2em] text-white">
                 {line}
               </p>
             ))}

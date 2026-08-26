@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import CTA from '../components/CTA';
 import Reveal from '../components/Reveal';
 
@@ -7,11 +8,13 @@ const servicesData = [
     title: "Conference & Event Coverage",
     description: "Professional photo and video coverage for global events, seminars, workshops, cocktail receptions, and launch events. We capture key moments with precision and professionalism—supporting visibility, strengthening reporting, and enhancing brand positioning across multiple media platforms.",
     image: "/images/isaac/bigz-17.webp",
+    href: "/corporate",
   },
   {
     title: "Documentary  Film & Photography",
     description: "We produce documentary-style success stories rooted in real experiences—capturing voices, outcomes, and transformation through compelling film and authentic, high-quality imagery that brings your programmes to life across reports, campaigns, and digital platforms.",
     image: "/images/isaac/documentary-and-film.webp",
+    href: "/documentaries",
   },
   {
     title: "Tailored Visual Content Packages",
@@ -57,6 +60,16 @@ const ServiceItem = ({ service, index, delay }) => (
         <p className="text-black text-[18px] md:text-[20px] leading-[1.6] max-w-[48ch]">
           {service.description}
         </p>
+        {service.href && (
+          <div className="flex justify-center mt-8">
+            <Link
+              href={service.href}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white text-[14px] tracking-[0.1em] uppercase hover:bg-black/90 transition-colors duration-300"
+            >
+              Learn More
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   </Reveal>
