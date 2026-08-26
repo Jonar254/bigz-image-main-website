@@ -15,7 +15,7 @@ const HeroBackgroundVideo = () => (
       loop
       muted
       playsInline
-      poster="/images/community-webp/9B3A0434.webp"
+      poster="/preview.webp"
       preload="auto"
     >
       <source src="/optimized-website-reel.mp4" type="video/mp4" />
