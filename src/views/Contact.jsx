@@ -27,7 +27,8 @@ const INITIAL_FORM = {
   phone: '',
   service: '',
   location: '',
-  shootDate: '',
+  startShootDate: '',
+  endShootDate: '',
   message: '',
 };
 
@@ -216,34 +217,43 @@ const SubmitButton = ({ submitting }) => (
 );
 
 const FormFields = ({ form, handle }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
-    <Field label="Your Name" required>
-      <TextInput value={form.name} onChange={handle('name')} placeholder="Enter your name" />
-    </Field>
-    <Field label="Email" required>
-      <TextInput
-        type="email"
-        value={form.email}
-        onChange={handle('email')}
-        placeholder="Enter your email"
-      />
-    </Field>
-    <Field label="Phone Number" required>
-      <TextInput
-        type="tel"
-        value={form.phone}
-        onChange={handle('phone')}
-        placeholder="Enter your phone number"
-      />
-    </Field>
-    <Field label="Which service are you looking for?" required>
-      <SelectField
-        value={form.service}
-        onChange={handle('service')}
-        placeholder="Choose service"
-        options={SERVICE_TYPES}
-      />
-    </Field>
+  <div className="flex flex-col gap-y-8">
+    {/* First row: Name and Email */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
+      <Field label="Your Name" required>
+        <TextInput value={form.name} onChange={handle('name')} placeholder="Enter your name" />
+      </Field>
+      <Field label="Email" required>
+        <TextInput
+          type="email"
+          value={form.email}
+          onChange={handle('email')}
+          placeholder="Enter your email"
+        />
+      </Field>
+    </div>
+
+    {/* Second row: Phone and Service */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
+      <Field label="Phone Number" required>
+        <TextInput
+          type="tel"
+          value={form.phone}
+          onChange={handle('phone')}
+          placeholder="Enter your phone number"
+        />
+      </Field>
+      <Field label="Which service are you looking for?" required>
+        <SelectField
+          value={form.service}
+          onChange={handle('service')}
+          placeholder="Choose service"
+          options={SERVICE_TYPES}
+        />
+      </Field>
+    </div>
+
+    {/* Third row: Job Location (full width) */}
     <Field label="Job Location" required>
       <TextInput
         value={form.location}
@@ -251,13 +261,24 @@ const FormFields = ({ form, handle }) => (
         placeholder="eg. Mombasa, Kenya"
       />
     </Field>
-    <Field label="Main shoot date">
-      <CustomDatePicker
-        value={form.shootDate}
-        onChange={handle('shootDate')}
-        className="border border-neutral-300 bg-white rounded-md px-4 py-3 focus:outline-none focus:border-black"
-      />
-    </Field>
+
+    {/* Fourth row: Start and End Shoot Dates */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
+      <Field label="Start shoot date">
+        <CustomDatePicker
+          value={form.startShootDate}
+          onChange={handle('startShootDate')}
+          className="border border-neutral-300 bg-white rounded-md px-4 py-3 focus:outline-none focus:border-black"
+        />
+      </Field>
+      <Field label="End shoot date">
+        <CustomDatePicker
+          value={form.endShootDate}
+          onChange={handle('endShootDate')}
+          className="border border-neutral-300 bg-white rounded-md px-4 py-3 focus:outline-none focus:border-black"
+        />
+      </Field>
+    </div>
   </div>
 );
 

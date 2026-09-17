@@ -408,6 +408,12 @@ export const allProjects = [
       "/images/documentaries/ahf-kenya-webp/AHF World AIDs Day 2020 Mikindani-189.webp",
       "/images/documentaries/ahf-kenya-webp/AHF World AIDs Day 2020 Mikindani-37.webp",
       "/images/documentaries/ahf-kenya-webp/AHF World AIDs Day 2020 Mikindani-39.webp",
+      "/images/documentaries/ahf-kenya-webp/ahf-new/F24A9374.webp",
+      "/images/documentaries/ahf-kenya-webp/ahf-new/F24A9388.webp",
+      "/images/documentaries/ahf-kenya-webp/ahf-new/F24A9405.webp",
+      "/images/documentaries/ahf-kenya-webp/ahf-new/F24A9446.webp",
+      "/images/documentaries/ahf-kenya-webp/ahf-new/F24A9453.webp",
+      "/images/documentaries/ahf-kenya-webp/ahf-new/F24A9576.webp",
     ],
   },
   {
@@ -586,6 +592,23 @@ export const allProjects = [
       "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/lamu showcase 2024-43.webp",
       "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/lamu showcase 2024-63.webp",
       "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/lamu showcase 2024-94.webp",
+      "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/new-2030/SCHOOLS2030 SHOWCASE 2025-176.webp",
+      "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/new-2030/SCHOOLS2030 SHOWCASE 2025-182.webp",
+      "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/new-2030/SCHOOLS2030 SHOWCASE 2025-189.webp",
+      "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/new-2030/SCHOOLS2030 SHOWCASE 2025-193.webp",
+      "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/new-2030/SCHOOLS2030 SHOWCASE 2025-22.webp",
+      "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/new-2030/SCHOOLS2030 SHOWCASE 2025-26.webp",
+      "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/new-2030/SCHOOLS2030 SHOWCASE 2025-293.webp",
+      "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/new-2030/SCHOOLS2030 SHOWCASE 2025-294.webp",
+      "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/new-2030/SCHOOLS2030 SHOWCASE 2025-321.webp",
+      "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/new-2030/SCHOOLS2030 SHOWCASE 2025-36.webp",
+      "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/new-2030/SCHOOLS2030 SHOWCASE 2025-362.webp",
+      "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/new-2030/SCHOOLS2030 SHOWCASE 2025-503.webp",
+      "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/new-2030/SCHOOLS2030 SHOWCASE 2025-504.webp",
+      "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/new-2030/SCHOOLS2030 SHOWCASE 2025-56.webp",
+      "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/new-2030/SCHOOLS2030 SHOWCASE 2025-66.webp",
+      "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/new-2030/SCHOOLS2030 SHOWCASE 2025-68.webp",
+      "/images/corporate/SHOOLS2030 SHOWCASE LAMU AND MSA-webp/new-2030/SCHOOLS2030 SHOWCASE 2025-81.webp",
     ],
   },
   {
@@ -633,6 +656,24 @@ export const allProjects = [
     services: ["Workshop Video Coverage", "Corporate Documentary", "Impact Storytelling"],
     gallery: [
       "/images/corporate/action-against-hunger-placeholder.webp",
+    ],
+  },
+  {
+    id: 26,
+    slug: "advancing-gender-equality-civil-society",
+    title: "Advancing Gender Equality through Civil Society",
+    category: "Corporate Videography",
+    description: "Documentary video coverage highlighting gender equality initiatives and civil society engagement.",
+    fullDescription:
+      "This documentary showcases the critical work of civil society organizations in advancing gender equality. Through compelling storytelling and authentic visuals, the film captures the voices, challenges, and progress of gender equity initiatives. BigzImage's coverage supports advocacy, stakeholder communication, and program visibility for gender-focused development work.",
+    image: "/images/corporate/GENDER STATEGIC PLAN LAUNCE-webp/_BIG7698.webp",
+    heroImage: "/images/corporate/GENDER STATEGIC PLAN LAUNCE-webp/_BIG7698.webp",
+    videoUrl: "https://www.youtube.com/embed/HNCsS_kaJlY",
+    services: ["Documentary Video Production", "Gender Advocacy Storytelling", "Corporate Impact Video"],
+    gallery: [
+      "/images/corporate/GENDER STATEGIC PLAN LAUNCE-webp/_BIG7698.webp",
+      "/images/corporate/GENDER STATEGIC PLAN LAUNCE-webp/_BIG7278.webp",
+      "/images/corporate/GENDER STATEGIC PLAN LAUNCE-webp/_BIG7296.webp",
     ],
   },
 ];
@@ -701,7 +742,7 @@ export const corporatePhotographyProjects = allProjects.filter((p) =>
 );
 
 export const corporateVideographyProjects = allProjects.filter((p) =>
-  ["action-against-hunger-workshop"].includes(p.slug),
+  ["action-against-hunger-workshop", "advancing-gender-equality-civil-society"].includes(p.slug),
 );
 
 const documentaryPhotographySlugSet = new Set(documentaryPhotographyProjects.map((p) => p.slug));
